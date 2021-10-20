@@ -52,7 +52,61 @@
     menuProduct: Handlebars.compile(document.querySelector(select.templateOf.menuProduct).innerHTML),
   };
 
+  class Product {
+    constructor(id, data){
+      const thisProduct = this;
+      thisProduct.id = id;
+      thisProduct.data = data;
+      thisProduct.renderInMenu();
+      thisProduct.initAccordion();
+      console.log('new Product:', thisProduct);
+    }
+    renderInMenu() {
+      const thisProduct = this;
+      //generate html based on template
+      const generatedHTML = templates.menuProduct(thisProduct.data);
+      //create dom element
+      thisProduct.element = utils.createDOMFromHTML(generatedHTML);
+      //find menu container
+      const menuContainer = document.querySelector(select.containerOf.menu);
+      //add element to menu
+      menuContainer.appendChild(thisProduct.element);
+    }
+    initAccordion() {
+      const thisProduct = this;
+      //find the clickable trigger
+      const clickableTrigger = thisProduct.element.querySelector(select.menuProduct.clickable);
+      //START: add event listener to trigger
+      clickableTrigger.addEventListener('click', function(event) {
+        console.log(event.target);
+        //prevent default
+        event.preventDefault();
+        //find active product
+        const activeProducts = document.querySelectorAll(select.all.menuProductsActive);
+        //add class active to the clickable trigger and remove class active from other active products
+        for (let activeProduct of activeProducts) {
+          if (activeProduct !== thisProduct.element) {
+            activeProduct.classList.remove(classNames.menuProduct.wrapperActive);
+          }
+        }
+        thisProduct.element.classList.toggle(classNames.menuProduct.wrapperActive);
+      });
+      
+    }
+  }
+  
   const app = {
+    initMenu: function() {
+      const thisApp = this;
+      console.log('thisApp.data:', thisApp.data);
+      for (let productData in thisApp.data.products) {
+        new Product(productData, thisApp.data.products[productData]);
+      }
+    },
+    initData: function() {
+      const thisApp = this;
+      thisApp.data = dataSource;
+    },
     init: function(){
       const thisApp = this;
       console.log('*** App starting ***');
@@ -60,8 +114,12 @@
       console.log('classNames:', classNames);
       console.log('settings:', settings);
       console.log('templates:', templates);
+      thisApp.initData();
+      thisApp.initMenu();
     },
   };
+
+  
 
   app.init();
 }
