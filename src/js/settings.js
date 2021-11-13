@@ -46,6 +46,12 @@ export const select = {
     peopleAmount: '.people-amount',
     hoursAmount: '.hours-amount',
     tables: '.floor-plan .table',
+    floorPlan: '.floor-plan',
+    newlyBookedTables: '.newly-booked',
+    form: '.booking-form',
+    phone: 'input[name="phone"]',
+    address: 'input[name="address"]',
+    starter: 'input[name="starter"]',
   },
   // CODE ADDED START
   cart: {
@@ -80,6 +86,9 @@ export const classNames = {
   booking: {
     loading: 'loading',
     tableBooked: 'booked',
+    table: 'table',
+    newlyBooked: 'newly-booked',
+    
   },
   nav: {
     active: 'active',
@@ -104,8 +113,8 @@ export const settings = {
     orders: 'orders',
     product: 'product',
     order: 'order',
-    booking: 'booking',
-    event: 'event',
+    bookings: 'bookings',
+    events: 'events',
     dateStartParamKey: 'date_gte',
     dateEndParamKey: 'date_lte',
     notRepeatParam: 'repeat=false',
