@@ -1,0 +1,214 @@
+.banner{
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 7rem;
+        @media (max-width: 690px) {
+            flex-direction: column;
+            height: 16rem;
+        }
+
+        a{
+            width:48%;
+            height: 100%;
+            position: relative;
+            border-radius: 5px;
+            @media (max-width: 690px) {
+                width: 90%;
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &__option{
+        width:100%;
+        height: 100%;
+        position: relative;
+        border-radius: 5px;
+        @media (max-width: 690px) {
+            width: 90%;
+            margin-top: 1rem;
+        }
+        
+        h2{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-85%);
+            color: $color-light;
+            font-family: $font-header;
+            font-size: 1.5rem;
+            transition: all 0.5s;
+        }
+
+        &--text{
+            position: absolute;
+            top:120%;
+            left:50%;
+            transform: translate(-50%,-85%);
+            color: $color-light;
+            font-family: $font-header;
+            font-size: 0.9rem;
+            transition: all 0.5s;
+
+        }
+        &:hover h2{
+            top:30%;
+        }
+        &:hover p{
+            top:60%;
+        }
+    }
+
+    .order-online{
+        background-image: url('../../images/home/pizza-1.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .book-table{
+        background-image: url('../../images/home/pizza-2.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__opening-hours{
+        width:100%;
+        height: 7rem;
+        position: relative;
+        margin-bottom: 1rem;
+        margin-top: 0.5rem;
+        background-color: $color-main;
+        border-radius: 5px;
+
+        .opening-hours-container{
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            color: $color-light;
+            margin:0;
+            text-align: center;
+
+            .opening-hours{
+                font-family: $font-header;
+                font-size: 1.5rem;
+                margin: 0;
+            }
+
+            .opening-hours__text{
+                margin: 0;
+            }
+        }
+    }
+    
+}
+
+.view-more{
+    margin-bottom: 3rem;
+}
+
+.view-more__link{
+    color: $color-main;
+}
+
+.gallery{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+    .row{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1.5rem;
+    }
+
+    &__image{
+        width: 30%;
+        height: 11rem;
+        position: relative;
+
+        &::after{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(153, 142, 142, 0.493);
+            opacity: 0;
+            z-index: 2;
+            transition: opacity 1s;
+        }
+
+        &:hover::after{
+            opacity: 1;
+        }
+
+        &--1{
+            background-image: url(../../images/home/pizza-5.jpg);
+            background-position: center;
+        }
+
+        &--2{
+            background-image: url(../../images/home/pizza-6.jpg);
+            background-position: center;
+        }
+
+        &--3{
+            background-image: url(../../images/home/pizza-7.jpg);
+            background-position: center;
+        }
+
+        &--4{
+            background-image: url(../../images/home/pizza-8.jpg);
+            background-position: center;
+        }
+
+        &--5{
+            background-image: url(../../images/home/pizza-9.jpg);
+            background-position: center;
+        }
+
+        &--6{
+            background-image: url(../../images/home/pizza-2.jpg);
+            background-position: center;
+        }
+
+        &:hover .gallery__links{
+            opacity: 1;
+        }
+    }
+
+    &__links{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        z-index: 3;
+        opacity: 0;
+        transition: all 1s;
+        
+        a{
+            color: $color-light;
+            text-decoration: none;
+            transition: all 1s;
+
+            &:hover{
+                color: $color-main;
+            }
+        }
+    }
+}

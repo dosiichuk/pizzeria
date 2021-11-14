@@ -3,12 +3,14 @@ import Product from './components/Product.js';
 import Cart from './components/Cart.js';
 import Booking from './components/Booking.js';
 import Home from './components/Home.js';
+import Slider from './components/Slider.js';
 
 const app = {
   initPages: function(){
     const thisApp = this;
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
+    thisApp.homeLinks = document.querySelectorAll(select.all.homeLinks);
     const idFromHash = window.location.hash.replace('#/', '');
     let pageMatchingHash = thisApp.pages[0].id;
     console.log(pageMatchingHash);
@@ -19,7 +21,7 @@ const app = {
       }
     }
     thisApp.activatePage(pageMatchingHash);
-    for(let link of thisApp.navLinks){
+    for(let link of Array.prototype.concat.call(...thisApp.navLinks, ...thisApp.homeLinks)){
       link.addEventListener('click', function(event){
         const clickedElement = this;
         event.preventDefault();
@@ -85,8 +87,8 @@ const app = {
   },
   initHome: function(){
     const homeContainer = document.querySelector(select.containerOf.home);
-    const home = new Home(homeContainer);
-    console.log('Homepage initiated', home);
+    new Home(homeContainer);
+    new Slider();
   },
   init: function(){
     const thisApp = this;

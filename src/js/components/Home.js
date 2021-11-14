@@ -10,8 +10,7 @@ class Home{
     thisHomePage.dom = {};
     thisHomePage.dom.wrapper = wrapperElement;
     thisHomePage.dom.wrapper.innerHTML = generatedHtml;
-  }
-    
+  }  
 }
 
 export default Home;

@@ -78,7 +78,172 @@
   </div>
 
   <script id="template-home" type="text/x-handlebars-template">
-    <div>Hello from homepage</div>
+    <section class="container banner">
+      <div class="row">
+        <a href="#order" class="home-link">
+          <div class="banner__option order-online">
+            <h2 class="banner__option--name h2">
+              ORDER ONLINE
+            </h2>
+            <p class="banner__option--text">Instant delivery</p>
+          </div>
+        </a>
+        <a href="#booking" class="home-link">
+          <div class="banner__option book-table">
+            <h2 class="banner__option--name h2">BOOK A TABLE</h2>
+            <p class="banner__option--text">Always welcome</p>
+          </div>
+        </a>
+      </div>
+      <div class="banner__opening-hours">
+        <div class="opening-hours-container">
+          <p class="opening-hours">OPENING HOURS:</p>
+          <p class="opening-hours__text">TUE-SUN: 12:00PM-12:00AM</p>
+        </div>
+      </div>
+
+    </section>
+    <section class="carousel container">
+      <div class="slider">
+        <div class="slide">
+          <div class="slide__image slide__image--1">
+            &nbsp;
+          </div>
+          <div class="testimonial">
+            <h5 class="testimonial__header">Best service</h5>
+            <blockquote class="testimonial__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              Accusantium quas quisquam non? Quas voluptate nulla minima
+              deleniti optio ullam nesciunt, numquam 
+            </blockquote>
+            <address class="testimonial__author">
+              
+              <h6 class="testimonial__name">Piotr Number</h6>
+              <p class="testimonial__location">New York, USA</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide__image slide__image--2">
+            &nbsp;
+          </div>
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Delicious food
+            </h5>
+            <blockquote class="testimonial__text">
+              Quisquam itaque deserunt ullam, quia ea repellendus provident,
+              ducimus neque ipsam modi voluptatibus doloremque, corrupti
+              laborum. Incidunt numquam
+            </blockquote>
+            <address class="testimonial__author">
+              
+              <h6 class="testimonial__name">Anna Wanna</h6>
+              <p class="testimonial__location">Warsaw, Poland</p>
+            </address>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide__image slide__image--3">
+            &nbsp;
+          </div>
+          <div class="testimonial">
+            <h5 class="testimonial__header">
+              Great venue
+            </h5>
+            <blockquote class="testimonial__text">
+              Debitis, nihil sit minus suscipit magni aperiam vel tenetur
+              incidunt commodi architecto numquam omnis nulla autem,
+              necessitatibus blanditiis modi
+            </blockquote>
+            <address class="testimonial__author">
+              
+              <h6 class="testimonial__name">David Json</h6>
+              <p class="testimonial__location">Poznan, Poland</p>
+            </address>
+          </div>
+        </div>
+
+        <button class="slider__btn slider__btn--left">&larr;</button>
+        <button class="slider__btn slider__btn--right">&rarr;</button>
+        <div class="dots">
+          <button class="dots__dot" data-slide="0"></button>
+          <button class="dots__dot" data-slide="1"></button>
+          <button class="dots__dot" data-slide="2"></button>
+        </div>
+      </div>
+    </section>
+    <section class="container gallery">
+      <div class="row">
+        <div class="gallery__image gallery__image--1">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gallery__image gallery__image--2">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gallery__image gallery__image--3">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="gallery__image gallery__image--4">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gallery__image gallery__image--5">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+        <div class="gallery__image gallery__image--6">
+          <div class="gallery__links">
+            <a href="#" class="gallery__link">
+              <i class="fas fa-share-alt"></i>
+            </a>
+            <a href="#" class="gallery__link">
+              <i class="fas fa-heart"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="view-more">
+      <a href="#" class="view-more__link">View more on Instagram</a>
+    </section>
   </script>
 
   <script id="template-cart-product" type="text/x-handlebars-template">
@@ -252,7 +417,6 @@
       </form>
     </div>
   </script>
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="vendor/range-slider.min.js"></script>

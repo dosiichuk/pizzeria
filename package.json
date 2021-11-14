@@ -29,7 +29,8 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "json-server": "^0.17.0"
+        "json-server": "^0.17.0",
+        "tiny-slider": "^2.9.4"
     },
     "devDependencies": {
         "rimraf": "^3.0.2",

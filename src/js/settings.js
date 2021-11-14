@@ -16,6 +16,8 @@ export const select = {
     menuProducts: '#product-list > .product',
     menuProductsActive: '#product-list > .product.active',
     formInputs: 'input, select',
+    homeLinks: '.home-link',
+    slides: '.slide',
   },
   menuProduct: {
     clickable: '.product__header',
@@ -24,6 +26,12 @@ export const select = {
     imageWrapper: '.product__images',
     amountWidget: '.widget-amount',
     cartButton: '[href="#add-to-cart"]',
+  },
+  slider: {
+    buttonLeft: '.slider__btn--left',
+    buttonRight: '.slider__btn--right',
+    dotContainer: '.dots',
+    dots: '.dots__dot',
   },
   widgets: {
     amount: {
@@ -98,6 +106,8 @@ export const classNames = {
   pages: {
     active: 'active',
   },
+  dot: 'dots__dot',
+  dotActive: 'dots__dot--active',
 };
 
 export const settings = {
