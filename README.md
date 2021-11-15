@@ -1,3 +1,3 @@
 version 2.3
 
-[Link to the published webpage:](pizzeria-test-1234.herokuapp.com)
+Click[here](pizzeria-test-1234.herokuapp.com) to access the webpage published on Heroku
